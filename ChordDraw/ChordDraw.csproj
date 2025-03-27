@@ -46,22 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chord.cs" />
     <Compile Include="chordGeneratorForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="chordGeneratorForm.Designer.cs">
       <DependentUpon>chordGeneratorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChordParser.cs" />
-    <Compile Include="ChordPicture.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ChordPicture.Designer.cs">
-      <DependentUpon>ChordPicture.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Fingering.cs" />
-    <Compile Include="Note.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="chordGeneratorForm.resx">
@@ -88,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chorderator\Chorderator.csproj">
+      <Project>{0d895f89-42df-4469-a287-b89a75bdd9b6}</Project>
+      <Name>Chorderator</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

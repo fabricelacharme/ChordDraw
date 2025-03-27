@@ -10,7 +10,7 @@
 
 using System;
 using System.Windows.Forms;
-using ChordLib;
+using Chorderator;
 
 namespace ChordDraw
 {
@@ -29,7 +29,7 @@ namespace ChordDraw
                                                    };
        
         private int chordPicWidth, chordPicBorder;
-                      
+        
 
         public chordGeneratorForm()
         {

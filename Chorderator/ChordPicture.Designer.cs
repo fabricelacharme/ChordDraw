@@ -1,4 +1,4 @@
-﻿namespace ChordLib
+﻿namespace Chorderator
 {
     partial class ChordPicture
     {

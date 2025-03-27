@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace ChordLib
+namespace Chorderator
 {
     /// <summary>
 	/// Represents a chord (note: not a chord fingering)

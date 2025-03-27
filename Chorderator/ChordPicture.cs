@@ -3,11 +3,11 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace ChordLib
+namespace Chorderator
 {
     public partial class ChordPicture : UserControl
     {
-       
+
         private Fingering chordToShow = null;
 
         public ChordPicture()
@@ -164,7 +164,7 @@ namespace ChordLib
             }
         }
 
-        
+
 
         private void ChordPicture_Resize(object sender, EventArgs e)
         {

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Text;
 
-namespace ChordLib
+namespace Chorderator
 {
 
     /// <summary>

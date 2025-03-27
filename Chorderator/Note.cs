@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ChordLib
+namespace Chorderator
 {
 
     public enum Accidental

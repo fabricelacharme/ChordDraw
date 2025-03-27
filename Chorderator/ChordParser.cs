@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ChordLib
+namespace Chorderator
 {
     /// <summary>
 	/// Summary description for ChordParser.
@@ -45,7 +45,7 @@ namespace ChordLib
         private string rootString, sharpFlat, majorMinor, number, susNumber, addNumber, alteredSharpFlat,
             alteredNumber, slashString, slashSharpFlat;
         private Note rootNote = null;
-        private ChordLib.Accidental accidentalType = Accidental.Sharp;
+        private Chorderator.Accidental accidentalType = Accidental.Sharp;
 
         private static Regex regex = new Regex("(?<root>[A-G]) (?<sharpFlat>[-+#b])? " +
             "(?<majorMinor>(?:Maj)|(?:maj)|(?:mMaj)|m|(?:dim))? " +
