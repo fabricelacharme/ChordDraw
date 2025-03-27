@@ -22,7 +22,7 @@ namespace ChordDraw
                                                        "Guitar: Open G", "DGDGBD",
                                                        "Guitar: Open D", "DADF#AD",
                                                        "Guitar: Open Em", "EBEGBE",
-                                                       "Guitar: Detuned 1/2-step", "EbAbDbGbBbEb",
+                                                       "Guitar: Detuned 1/2-step", "EbAbDbGbBbEb",                                                       
                                                        "Ukulele (soprano)", "GCEA",
                                                        "Mandolin", "EADG",
                                                        "<Custom>", ""
@@ -34,6 +34,15 @@ namespace ChordDraw
         public chordGeneratorForm()
         {
             InitializeComponent();
+
+            // Graphic optimization
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
+
+
+            
 
             // Size the chord pictures just big enough to fit 3 across.
             chordPicBorder = panelResults.ClientRectangle.Width / 40;

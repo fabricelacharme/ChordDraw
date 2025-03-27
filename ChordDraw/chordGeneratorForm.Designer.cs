@@ -44,35 +44,7 @@ namespace ChordDraw
             this.upDownCapo = new System.Windows.Forms.NumericUpDown();
             this.panelResults = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.upDownCapo)).BeginInit();
-            this.SuspendLayout();            
-            // 
-            // outputTextBox
-            // 
-            this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right)));
-            this.outputTextBox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.outputTextBox.Location = new System.Drawing.Point(0, 0);
-            this.outputTextBox.Multiline = true;
-            this.outputTextBox.Name = "outputTextBox";
-            this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.outputTextBox.Size = new System.Drawing.Size(112, 8);
-            this.outputTextBox.TabIndex = 1;
-            this.outputTextBox.Text = "Please type a chord name";
-            this.outputTextBox.Visible = false;
-            // 
-            // panelResults
-            // 
-            this.panelResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelResults.AutoScroll = true;
-            this.panelResults.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelResults.Location = new System.Drawing.Point(40, 128);
-            this.panelResults.Name = "panelResults";
-            this.panelResults.Size = new System.Drawing.Size(576, 464);
-            this.panelResults.TabIndex = 5;
-            this.panelResults.Layout += new System.Windows.Forms.LayoutEventHandler(this.panelResults_Layout);
-
+            this.SuspendLayout();
             // 
             // textBoxChordInEnglish
             // 
@@ -82,13 +54,27 @@ namespace ChordDraw
             this.textBoxChordInEnglish.ReadOnly = true;
             this.textBoxChordInEnglish.Size = new System.Drawing.Size(576, 13);
             this.textBoxChordInEnglish.TabIndex = 8;
-            this.textBoxChordInEnglish.Text = "";
             this.textBoxChordInEnglish.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // outputTextBox
+            // 
+            this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.outputTextBox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputTextBox.Location = new System.Drawing.Point(0, 0);
+            this.outputTextBox.Multiline = true;
+            this.outputTextBox.Name = "outputTextBox";
+            this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.outputTextBox.Size = new System.Drawing.Size(112, 8);
+            this.outputTextBox.TabIndex = 1;
+            this.outputTextBox.Text = "Please type a chord name";
+            this.outputTextBox.Visible = false;
             // 
             // textBoxTuning
             // 
             this.textBoxTuning.Location = new System.Drawing.Point(440, 56);
             this.textBoxTuning.Name = "textBoxTuning";
+            this.textBoxTuning.Size = new System.Drawing.Size(100, 20);
             this.textBoxTuning.TabIndex = 3;
             this.textBoxTuning.Text = "EADGBE";
             this.textBoxTuning.TextChanged += new System.EventHandler(this.textBoxTuning_TextChanged);
@@ -135,7 +121,6 @@ namespace ChordDraw
             this.inputTextBox.Name = "inputTextBox";
             this.inputTextBox.Size = new System.Drawing.Size(136, 20);
             this.inputTextBox.TabIndex = 0;
-            this.inputTextBox.Text = "";
             this.inputTextBox.TextChanged += new System.EventHandler(this.inputTextBox_TextChanged);
             // 
             // label3
@@ -158,17 +143,29 @@ namespace ChordDraw
             // 
             this.upDownCapo.CausesValidation = false;
             this.upDownCapo.Location = new System.Drawing.Point(272, 80);
-            this.upDownCapo.Maximum = new System.Decimal(new int[] {
-                                                                       12,
-                                                                       0,
-                                                                       0,
-                                                                       0});
+            this.upDownCapo.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
             this.upDownCapo.Name = "upDownCapo";
             this.upDownCapo.Size = new System.Drawing.Size(48, 20);
             this.upDownCapo.TabIndex = 4;
-            this.upDownCapo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.upDownCapo_KeyPress);
             this.upDownCapo.ValueChanged += new System.EventHandler(this.upDownCapo_ValueChanged);
-
+            this.upDownCapo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.upDownCapo_KeyPress);
+            // 
+            // panelResults
+            // 
+            this.panelResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelResults.AutoScroll = true;
+            this.panelResults.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelResults.Location = new System.Drawing.Point(40, 128);
+            this.panelResults.Name = "panelResults";
+            this.panelResults.Size = new System.Drawing.Size(576, 464);
+            this.panelResults.TabIndex = 5;
+            this.panelResults.Layout += new System.Windows.Forms.LayoutEventHandler(this.panelResults_Layout);
             // 
             // chordGeneratorForm
             // 
@@ -187,6 +184,7 @@ namespace ChordDraw
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxTuning);
             this.Controls.Add(this.inputTextBox);
+            this.DoubleBuffered = true;
             this.Name = "chordGeneratorForm";
             this.Text = "Chord generator";
             ((System.ComponentModel.ISupportInitialize)(this.upDownCapo)).EndInit();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace ChordLib
@@ -12,6 +13,12 @@ namespace ChordLib
         public ChordPicture()
         {
             InitializeComponent();
+
+            // Graphic optimization
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
 
             this.Resize += new EventHandler(ChordPicture_Resize);
             this.MouseDown += new MouseEventHandler(ChordPicture_MouseDown);
@@ -33,6 +40,9 @@ namespace ChordLib
         protected override void OnPaint(PaintEventArgs e)
         {
             // ES: Much of this code is the same as the GTK# version.  See about abstracting it.
+
+            // Antialiasing
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
             int numStrings = this.chordToShow.NumStrings;
             int numFrets = 6; // ES: Make this adjustable
