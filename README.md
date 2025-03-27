@@ -1,6 +1,6 @@
-The Chorderator Chord Generator
+The Chorderator Chord Generator from Eddie Sullivan adapted to my needs
 
-Eddie Sullivan
+
 
 This is an algorithmic chord generator for stringed, fretted musical instruments. It's design allows it to be used for finding chords in a number of different tunings on many different instruments.
 
